@@ -10,7 +10,6 @@ on:
 
   workflow_dispatch:
 
-
 jobs:
   tests:
     strategy:
@@ -21,16 +20,23 @@ jobs:
     runs-on: ${{matrix.os}}
     steps:
       - uses: actions/checkout@v2
+
       - uses: actions/setup-python@v2
         with:
           python-version: ${{matrix.python-version}}
+
       - name: Install Project
         run: pip install '.[test]'
+
       - name: Run tests
         run: pytest -v --junitxml=test-result.xml
-      - name: Publish jUnit results
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        if: always()
-        with:
-          files: test-result.xml
-          check_name: Test Result (Python ${{matrix.python-version}})
+
+      - name: command
+        run: ls -lah; pwd
+
+      # - name: Publish Test Results
+      #   uses: EnricoMi/publish-unit-test-result-action@v2
+      #   if: always()
+      #   with:
+      #     files: test-result.xml
+      #     check_name: Test Result (Python ${{matrix.python-version}})
