@@ -7,7 +7,7 @@ log = logging.Logger("dundie", LOG_LEVEL)
 
 
 def get_logger(logfile="dundie.log"):
-    """Returns a configured log"""    
+    """Returns a configured log"""
     fh = handlers.RotatingFileHandler(
         "meulog.log",
         maxBytes=300,
@@ -15,8 +15,7 @@ def get_logger(logfile="dundie.log"):
     )
     fh.setLevel(LOG_LEVEL)
     fmt = logging.Formatter(
-        '%(asctime)s %(name)s %(levelname)s '
-        'l:%(lineno)d f:%(filename)s: %(message)s'
+        "%(asctime)s %(name)s %(levelname)s " "l:%(lineno)d f:%(filename)s: %(message)s"
     )
 
     fh.setFormatter(fmt)
