@@ -1,6 +1,7 @@
 import pytest
-import uuid
+
 from dundie.core import load
+
 from .constants import PEOPLE_FILE
 
 

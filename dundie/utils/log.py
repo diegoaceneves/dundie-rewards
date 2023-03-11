@@ -1,5 +1,5 @@
-import os
 import logging
+import os
 from logging import handlers
 
 LOG_LEVEL = os.getenv("LOG_LEVEL", "WARNING").upper()
@@ -15,7 +15,8 @@ def get_logger(logfile="dundie.log"):
     )
     fh.setLevel(LOG_LEVEL)
     fmt = logging.Formatter(
-        "%(asctime)s %(name)s %(levelname)s " "l:%(lineno)d f:%(filename)s: %(message)s"
+        "%(asctime)s %(name)s %(levelname)s "
+        "l:%(lineno)d f:%(filename)s: %(message)s"
     )
 
     fh.setFormatter(fmt)
