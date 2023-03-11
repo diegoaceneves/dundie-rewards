@@ -31,5 +31,6 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
         with:
-          files: test-result.xml
+          files: |
+            **/*.xml
           check_name: Test Result (Python ${{matrix.python-version}})
