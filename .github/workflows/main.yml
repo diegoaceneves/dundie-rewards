@@ -28,8 +28,16 @@ jobs:
       - name: Install Project
         run: pip install '.[test]'
 
-      - name: Look for Stile Errors
+      - name: Look for Style Errors
         run: pflake8
+
+      - name: Look for auto format Errors
+        run: isort --profile=black --check --diff dundie tests integration
+
+      - name: Look for auto format Errors
+        run: black --check --diff dundie tests integration
+
+
 
 
   tests:

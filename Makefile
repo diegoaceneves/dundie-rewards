@@ -22,6 +22,11 @@ lint:
 	@.venv/bin/pflake8
 
 
+fmt:
+	@.venv/bin/isort dundie tests integration
+	@.venv/bin/black dundie tests integration
+
+
 testci:
 	@.venv/bin/pytest -v --junitxml=test-result.xml
 
