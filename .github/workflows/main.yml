@@ -34,9 +34,9 @@ jobs:
       - name: command
         run: ls -lah; pwd
 
-      - name: Publish Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        with:
-          files: test-result.xml
-          check_name: Test Result (Python ${{matrix.python-version}})
+      # - name: Publish Test Results
+      #   uses: EnricoMi/publish-unit-test-result-action@v2
+      #   if: always()
+      #   with:
+      #     files: test-result.xml
+      #     check_name: Test Result (Python ${{matrix.python-version}})
