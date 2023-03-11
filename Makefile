@@ -1,4 +1,4 @@
-.PHONY: install virtualenv ipython clean test
+.PHONY: install virtualenv ipython clean test testci watch lint
 
 
 install:
@@ -16,6 +16,10 @@ ipython:
 
 test:
 	@.venv/bin/pytest -s
+
+
+lint:
+	@.venv/bin/pflake8
 
 
 testci:
