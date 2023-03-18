@@ -27,6 +27,26 @@
                 "date": "2023-03-18T16:43:03.748241",
                 "actor": "system",
                 "value": 500
+            },
+            {
+                "date": "2023-03-18T19:16:08.144731",
+                "actor": "diego_neves",
+                "value": 30
+            },
+            {
+                "date": "2023-03-18T19:16:18.427570",
+                "actor": "diego_neves",
+                "value": -30
+            },
+            {
+                "date": "2023-03-18T19:23:43.741410",
+                "actor": "diego_neves",
+                "value": 30
+            },
+            {
+                "date": "2023-03-18T19:23:57.149729",
+                "actor": "diego_neves",
+                "value": -30
             }
         ],
         "schrute@dundlermifflin.com": [
@@ -34,6 +54,26 @@
                 "date": "2023-03-18T16:43:03.749690",
                 "actor": "system",
                 "value": 100
+            },
+            {
+                "date": "2023-03-18T19:16:08.144746",
+                "actor": "diego_neves",
+                "value": 30
+            },
+            {
+                "date": "2023-03-18T19:16:18.427581",
+                "actor": "diego_neves",
+                "value": -30
+            },
+            {
+                "date": "2023-03-18T19:23:43.741420",
+                "actor": "diego_neves",
+                "value": 30
+            },
+            {
+                "date": "2023-03-18T19:23:57.149740",
+                "actor": "diego_neves",
+                "value": -30
             }
         ],
         "lewis@dundlermifflin.com": [
