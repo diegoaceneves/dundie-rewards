@@ -2,8 +2,8 @@
 
 
 install:
-	@echo "Installing for dev environment"
-	@.venv/bin/python -m pip install -e '.[dev]'
+	@echo "Installing Requirements"
+	@.venv/bin/python -m pip install -e .
 
 
 virtualenv:
@@ -15,7 +15,7 @@ ipython:
 
 
 test:
-	@.venv/bin/pytest -s
+	@.venv/bin/pytest -s --forked
 
 
 lint:
@@ -32,8 +32,8 @@ testci:
 
 
 watch:
-	# @.venv/bin/ptw -- -vv -s
-	@ls **/*.py | xargs pytest
+	# @.venv/bin/ptw
+	@ls **/*.py | entr pytest --forked
 
 clean:            ## Clean unused files.
 	@find ./ -name '*.pyc' -exec rm -f {} \;
@@ -49,3 +49,4 @@ clean:            ## Clean unused files.
 	@rm -rf htmlcov
 	@rm -rf .tox/
 	@rm -rf docs/_build
+
