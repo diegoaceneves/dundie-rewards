@@ -59,7 +59,6 @@ def show(output, **query):
         with open(output, "w") as output_file:
             output_file.write(json.dumps(result))
 
-
     if not result:
         print("Nothing to show")
 
