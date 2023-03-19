@@ -1,3 +1,4 @@
+"""CLI for dundie."""
 import json
 
 import pkg_resources
@@ -27,7 +28,7 @@ def main():
 @main.command()
 @click.argument("filepath", type=click.Path(exists=True))
 def load(filepath):
-    """Loads the file to the database.
+    """Does load the file to the database.
 
     ## Features
     - Validates data
@@ -53,7 +54,7 @@ def load(filepath):
 @click.option("--email", required=False)
 @click.option("--output", default=None)
 def show(output, **query):
-    """Shows information about user or dept."""
+    """Does show information about user or dept."""
     result = core.read(**query)
     if output:
         with open(output, "w") as output_file:

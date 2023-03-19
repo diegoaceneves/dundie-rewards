@@ -15,7 +15,7 @@ ipython:
 
 
 test:
-	@.venv/bin/pytest -s --forked
+	@.venv/bin/pytest -s
 
 
 lint:
@@ -50,3 +50,5 @@ clean:            ## Clean unused files.
 	@rm -rf .tox/
 	@rm -rf docs/_build
 
+build:
+	@.venv/bin/python setup.py sdist bdist_wheel
